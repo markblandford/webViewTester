@@ -24,9 +24,11 @@ class ViewController: UIViewController, UIWebViewDelegate, WKNavigationDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        webView.allowsBackForwardNavigationGestures = true
 
         // progress bar
-        progressView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        progressView.autoresizingMask = [ .flexibleWidth, .flexibleTopMargin ]
 
         progressView.sizeToFit()
         let urlBarView = view.subviews[0].subviews[1]
@@ -39,6 +41,12 @@ class ViewController: UIViewController, UIWebViewDelegate, WKNavigationDelegate 
         webView.addObserver(self, forKeyPath:#keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         
         webView.navigationDelegate = self
+        
+        // add the ability to pull-down to refresh
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshWebView(_:)), for: UIControl.Event.valueChanged)
+        webView.scrollView.addSubview(refreshControl)
+        webView.scrollView.bounces = true
     }
 
     @IBAction func btnLoadUrlAction(_ sender: UIButton) {
@@ -62,6 +70,12 @@ class ViewController: UIViewController, UIWebViewDelegate, WKNavigationDelegate 
         if keyPath == "estimatedProgress" {
             progressView.progress = Float(webView.estimatedProgress)
         }
+    }
+    
+    @objc
+    func refreshWebView(_ sender: UIRefreshControl) {
+        webView?.reload()
+        sender.endRefreshing()
     }
 }
 

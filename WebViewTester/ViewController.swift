@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, UIWebViewDelegate {
+class ViewController: UIViewController, UIWebViewDelegate, WKNavigationDelegate {
 
     @IBOutlet var webView : WKWebView!
 
@@ -16,24 +16,34 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var urlField: UITextField!
 
-    @IBOutlet weak var layoutTextField: NSLayoutConstraint!
+    var progressView = UIProgressView(progressViewStyle: .default)
 
-    var myActivityIndicator = UIActivityIndicatorView()
-
+    deinit {
+        webView.removeObserver(self, forKeyPath:#keyPath(WKWebView.estimatedProgress))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //Create Custom ActivityIndicator
-        myActivityIndicator.center = self.view.center
-        myActivityIndicator.style = .large
-        view.addSubview(myActivityIndicator)
+        // progress bar
+        progressView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
 
-        //Adding observer for show loading indicator
-        self.webView.addObserver(self, forKeyPath:#keyPath(WKWebView.isLoading), options: .new, context: nil)
+        progressView.sizeToFit()
+        let urlBarView = view.subviews[0].subviews[1]
+        urlBarView.addSubview(progressView)
+
+        let bounds = urlBarView.bounds
+        progressView.frame = CGRect(x: 0, y: bounds.size.height, width: bounds.size.width, height: 2)
+
+        // observer for loading progress
+        webView.addObserver(self, forKeyPath:#keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+        
+        webView.navigationDelegate = self
     }
 
     @IBAction func btnLoadUrlAction(_ sender: UIButton) {
         if let urlString = urlField.text {
+            progressView.isHidden = false
             var requestUrl: String
 
             if urlString.starts(with: "http://") || urlString.starts(with: "https://"){
@@ -49,13 +59,8 @@ class ViewController: UIViewController, UIWebViewDelegate {
     }
 
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "loading" {
-            if webView.isLoading {
-                myActivityIndicator.startAnimating()
-                myActivityIndicator.isHidden = false
-            } else {
-                myActivityIndicator.stopAnimating()
-            }
+        if keyPath == "estimatedProgress" {
+            progressView.progress = Float(webView.estimatedProgress)
         }
     }
 }

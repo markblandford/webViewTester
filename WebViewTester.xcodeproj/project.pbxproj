@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		00BA2411240EAF370027DD23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BA2410240EAF370027DD23 /* AppDelegate.swift */; };
-		00BA2413240EAF370027DD23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BA2412240EAF370027DD23 /* SceneDelegate.swift */; };
-		00BA2415240EAF370027DD23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BA2414240EAF370027DD23 /* ContentView.swift */; };
 		00BA2417240EAF3A0027DD23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BA2416240EAF3A0027DD23 /* Assets.xcassets */; };
-		00BA241A240EAF3A0027DD23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BA2419240EAF3A0027DD23 /* Preview Assets.xcassets */; };
 		00BA241D240EAF3A0027DD23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BA241B240EAF3A0027DD23 /* LaunchScreen.storyboard */; };
+		00BA2431240F9A550027DD23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BA2430240F9A550027DD23 /* Main.storyboard */; };
+		00BA2433240FA3180027DD23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BA2428240F983D0027DD23 /* ViewController.swift */; };
+		00BA2437240FBE6C0027DD23 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00BA2435240FA3530027DD23 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00BA240D240EAF370027DD23 /* WebViewTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00BA240D240EAF370027DD23 /* webViewTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = webViewTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BA2410240EAF370027DD23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00BA2412240EAF370027DD23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		00BA2414240EAF370027DD23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		00BA2416240EAF3A0027DD23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		00BA2419240EAF3A0027DD23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		00BA241C240EAF3A0027DD23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00BA241E240EAF3A0027DD23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00BA2428240F983D0027DD23 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		00BA2430240F9A550027DD23 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		00BA2435240FA3530027DD23 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00BA2437240FBE6C0027DD23 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,47 +41,47 @@
 		00BA2404240EAF370027DD23 = {
 			isa = PBXGroup;
 			children = (
-				00BA240F240EAF370027DD23 /* WebViewTester */,
+				00BA240F240EAF370027DD23 /* webViewTester */,
 				00BA240E240EAF370027DD23 /* Products */,
+				00BA2434240FA3530027DD23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		00BA240E240EAF370027DD23 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				00BA240D240EAF370027DD23 /* WebViewTester.app */,
+				00BA240D240EAF370027DD23 /* webViewTester.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00BA240F240EAF370027DD23 /* WebViewTester */ = {
+		00BA240F240EAF370027DD23 /* webViewTester */ = {
 			isa = PBXGroup;
 			children = (
 				00BA2410240EAF370027DD23 /* AppDelegate.swift */,
-				00BA2412240EAF370027DD23 /* SceneDelegate.swift */,
-				00BA2414240EAF370027DD23 /* ContentView.swift */,
+				00BA2428240F983D0027DD23 /* ViewController.swift */,
+				00BA2430240F9A550027DD23 /* Main.storyboard */,
 				00BA2416240EAF3A0027DD23 /* Assets.xcassets */,
 				00BA241B240EAF3A0027DD23 /* LaunchScreen.storyboard */,
 				00BA241E240EAF3A0027DD23 /* Info.plist */,
-				00BA2418240EAF3A0027DD23 /* Preview Content */,
 			);
-			path = WebViewTester;
+			path = webViewTester;
 			sourceTree = "<group>";
 		};
-		00BA2418240EAF3A0027DD23 /* Preview Content */ = {
+		00BA2434240FA3530027DD23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				00BA2419240EAF3A0027DD23 /* Preview Assets.xcassets */,
+				00BA2435240FA3530027DD23 /* WebKit.framework */,
 			);
-			path = "Preview Content";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00BA240C240EAF370027DD23 /* WebViewTester */ = {
+		00BA240C240EAF370027DD23 /* webViewTester */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00BA2421240EAF3A0027DD23 /* Build configuration list for PBXNativeTarget "WebViewTester" */;
+			buildConfigurationList = 00BA2421240EAF3A0027DD23 /* Build configuration list for PBXNativeTarget "webViewTester" */;
 			buildPhases = (
 				00BA2409240EAF370027DD23 /* Sources */,
 				00BA240A240EAF370027DD23 /* Frameworks */,
@@ -90,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = WebViewTester;
-			productName = WebViewTester;
-			productReference = 00BA240D240EAF370027DD23 /* WebViewTester.app */;
+			name = webViewTester;
+			productName = webViewTester;
+			productReference = 00BA240D240EAF370027DD23 /* webViewTester.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,14 +104,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1110;
-				ORGANIZATIONNAME = "L&G";
+				ORGANIZATIONNAME = Blanmar;
 				TargetAttributes = {
 					00BA240C240EAF370027DD23 = {
 						CreatedOnToolsVersion = 11.1;
 					};
 				};
 			};
-			buildConfigurationList = 00BA2408240EAF370027DD23 /* Build configuration list for PBXProject "WebViewTester" */;
+			buildConfigurationList = 00BA2408240EAF370027DD23 /* Build configuration list for PBXProject "webViewTester" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				00BA240C240EAF370027DD23 /* WebViewTester */,
+				00BA240C240EAF370027DD23 /* webViewTester */,
 			);
 		};
 /* End PBXProject section */
@@ -134,8 +135,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				00BA241D240EAF3A0027DD23 /* LaunchScreen.storyboard in Resources */,
-				00BA241A240EAF3A0027DD23 /* Preview Assets.xcassets in Resources */,
 				00BA2417240EAF3A0027DD23 /* Assets.xcassets in Resources */,
+				00BA2431240F9A550027DD23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00BA2433240FA3180027DD23 /* ViewController.swift in Sources */,
 				00BA2411240EAF370027DD23 /* AppDelegate.swift in Sources */,
-				00BA2413240EAF370027DD23 /* SceneDelegate.swift in Sources */,
-				00BA2415240EAF370027DD23 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,15 +285,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WebViewTester/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WebViewTester/Info.plist;
+				INFOPLIST_FILE = webViewTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = digital.WebViewTester;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = blanmar.webViewTester;
+				PRODUCT_NAME = webViewTester;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,15 +303,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WebViewTester/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WebViewTester/Info.plist;
+				INFOPLIST_FILE = webViewTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = digital.WebViewTester;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = blanmar.webViewTester;
+				PRODUCT_NAME = webViewTester;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,7 +319,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00BA2408240EAF370027DD23 /* Build configuration list for PBXProject "WebViewTester" */ = {
+		00BA2408240EAF370027DD23 /* Build configuration list for PBXProject "webViewTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00BA241F240EAF3A0027DD23 /* Debug */,
@@ -330,7 +328,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		00BA2421240EAF3A0027DD23 /* Build configuration list for PBXNativeTarget "WebViewTester" */ = {
+		00BA2421240EAF3A0027DD23 /* Build configuration list for PBXNativeTarget "webViewTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00BA2422240EAF3A0027DD23 /* Debug */,

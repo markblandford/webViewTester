@@ -6,7 +6,9 @@ This is my first foray into ios development and is a simple app to wrap the [`WK
 
 The aim is that I have a means to debug certain issues only seen when sites are viewed via [LinkedIn](https://www.linkedin.com), [Facebook](https://www.facebook.com) etc.
 
-![alt text](./screen_shot_iPhone_11_Pro_Max.png "Screen shot from the iPhone 11 Pro Max in Simulator")
+<p align="center">
+  <img src="./screen_shot_iPhone_11_Pro_Max.png" alt="Screen shot from the iPhone 11 Pro Max in Simulator" width="400"/>
+</p>
 
 ## Usage
 

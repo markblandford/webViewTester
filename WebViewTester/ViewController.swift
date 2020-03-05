@@ -5,6 +5,7 @@
 //  Created by Mark Blandford on 03/03/2020.
 //  Copyright © 2020 Blanmar. All rights reserved.
 //
+
 import UIKit
 import WebKit
 
@@ -29,6 +30,7 @@ class ViewController: UIViewController, UIWebViewDelegate, WKNavigationDelegate 
 
         // progress bar
         progressView.autoresizingMask = [ .flexibleWidth, .flexibleTopMargin ]
+        progressView.progressTintColor = UIColor.systemGreen
 
         progressView.sizeToFit()
         let urlBarView = view.subviews[0].subviews[1]
